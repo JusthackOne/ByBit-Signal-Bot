@@ -53,7 +53,7 @@ export const WSCONFIG = {
   testnet: true,
 
   // If you can, use the v5 market (the newest generation of Bybit's websockets)
-  market: "v5" as const
+  market: "v5" as const,
 
   // how long to wait (in ms) before deciding the connection should be terminated & reconnected
   // pongTimeout: 1000,
@@ -74,7 +74,7 @@ export const WSCONFIG = {
   // requestOptions: { }
 
   // override which URL to use for websocket connections
-  // wsUrl: 'wss://stream.bytick.com/realtime'
+  wsUrl: 'wss://stream.bybit.com/v5/public/linear'
 };
 
 export const WEBSOCKET_STREAM = {

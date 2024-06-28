@@ -26,7 +26,7 @@ if (!BOT_TOKEN) {
   throw new Error("BOT_TOKEN is missing from environment variables.");
 }
 
-let bot, BybitWebSocketService, OIService;
+let bot, OIService;
 
 mongoose
   .connect(MONGODB_URI)
@@ -60,7 +60,7 @@ mongoose
     logger.debug(undefined, "Бот запущен");
 
     OIService = OIServiceCl.getOIService(Trackable, undefined, bot);
-    BybitWebSocketService =
+    const BybitWebSocketService =
       ByBitWebSocketApiService.getWebsocketClient(OIService);
     OIService.API = BybitWebSocketService;
     OIService.onStartApp();

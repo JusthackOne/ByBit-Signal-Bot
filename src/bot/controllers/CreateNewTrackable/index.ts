@@ -6,6 +6,7 @@ import { deleteFromSession, saveToSession } from "../../utils/session";
 import Trackable from "../../models/Trackable";
 import deleteMessages from "../../utils/deleteMessages";
 import loggerWithCtx from "../../utils/logger";
+import { OIService } from "../..";
 
 const sendMessage = new Composer();
 sendMessage.hears(MAIN_ROUTES.CREATE, async (ctx: ContextMessageUpdate) => {
@@ -28,7 +29,7 @@ saveTrackable.on(
   message("text"),
   async (ctx: ContextMessageUpdate, next) => {
     const symbol = ctx.message.text;
-
+const isCanBeTrackable = await OIService.subcribeNewTicker(symbol)
     const trackable = await Trackable.findOne({ symbol: symbol }).exec();
 
     if (trackable) {
@@ -36,6 +37,14 @@ saveTrackable.on(
 
       return next();
     }
+
+    if (!isCanBeTrackable) {
+      await ctx.replyWithHTML(`<b>Невозможно отслеживать данную пару</b>`);
+
+      return next();
+    }
+
+
 
     const newTrackable = new Trackable({ symbol });
     await newTrackable.save();

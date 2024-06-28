@@ -5,7 +5,7 @@ import ByBitWebSocketApiService from "./api.service";
 
 class OIService {
   private Trackables: ITrackableModel;
-  public API: ByBitWebSocketApiService | undefined;
+  public API: ByBitWebSocketApiService;
   private Bot;
   public test: string;
 
@@ -28,8 +28,20 @@ class OIService {
     await this.API.subscribe(WEBSOCKET_STREAM.tickers + ticker.symbol);
   }
 
+  async subcribeNewTicker(symbol: string) : Promise<Boolean> {
+    try {
+    await this.API.subscribe(WEBSOCKET_STREAM.tickers + symbol);
+    return true
+  } catch (err) {
+    return false
+  }
+  }
+
   async deleteTrackable(symbol: string) {
+    const isTrackableExist = await this.Trackables.findOne({symbol}).exec()
+    if ((isTrackableExist)) {
     await this.Trackables.deleteOne({ symbol }).exec();
+  }
   }
 
   static getOIService(

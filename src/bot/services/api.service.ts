@@ -23,12 +23,16 @@ class ByBitWebSocketApiService {
     this.client.on("error", this.onError);
   }
 
-  async subscribe(subcribeName: string, TYPE = "linear" as const) {
+  async subscribe(subcribeName: string, TYPE = "linear" as const) : Promise<void> {
+    try {
     // (v5) and/or subscribe to individual topics on demand
     await this.client
       .subscribeV5(subcribeName, TYPE)
 
-      .catch((err) => {});
+      
+      } catch(err) {
+        throw new Error('Can`t subcribe' + err)
+      }
   }
 
   // Метод для обработки события 'open'

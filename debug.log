@@ -13158,3 +13158,506 @@
   op: 'subscribe',
   wsKey: 'v5LinearPublic'
 }
+[2024-06-26T10:23:03.106Z] [debug]Logging initialized at debug level
+[2024-06-26T10:23:04.691Z] [debug]: Подключена бд
+[2024-06-26T10:23:04.773Z] [debug]: Создан дефолтный конфиг в бд
+[2024-06-26T10:23:04.775Z] [debug]: Бот запущен
+[2024-06-26T10:24:23.530Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:24:27.775Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:25:11.475Z] [debug]Logging initialized at debug level
+[2024-06-26T10:25:11.592Z] [debug]: Подключена бд
+[2024-06-26T10:25:11.618Z] [error]: Конфиг уже существует
+[2024-06-26T10:25:11.620Z] [debug]: Бот запущен
+[2024-06-26T10:25:12.572Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:25:12.854Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'e18605af-1ba8-4dd3-a658-368ff54c72af',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:25:18.049Z] [debug]Logging initialized at debug level
+[2024-06-26T10:25:18.188Z] [debug]: Подключена бд
+[2024-06-26T10:25:18.207Z] [error]: Конфиг уже существует
+[2024-06-26T10:25:29.598Z] [debug]Logging initialized at debug level
+[2024-06-26T10:25:29.778Z] [debug]: Подключена бд
+[2024-06-26T10:25:29.805Z] [error]: Конфиг уже существует
+[2024-06-26T10:25:29.808Z] [debug]: Бот запущен
+[2024-06-26T10:25:30.844Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:25:31.151Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '96bde073-32bd-4787-bd1b-1ab7a3f085a4',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:27:23.435Z] [debug]Logging initialized at debug level
+[2024-06-26T10:27:23.609Z] [debug]: Подключена бд
+[2024-06-26T10:27:23.644Z] [error]: Конфиг уже существует
+[2024-06-26T10:27:23.646Z] [debug]: Бот запущен
+[2024-06-26T10:27:24.717Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:27:25.023Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '76997273-174e-4709-ab07-fdc434d51a93',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:27:28.333Z] [debug]Logging initialized at debug level
+[2024-06-26T10:27:28.529Z] [debug]: Подключена бд
+[2024-06-26T10:27:28.561Z] [error]: Конфиг уже существует
+[2024-06-26T10:27:28.564Z] [debug]: Бот запущен
+[2024-06-26T10:27:29.595Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:27:29.867Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '2b3c6406-5fd0-48a7-ba08-4b5d725875e7',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:27:47.484Z] [debug]Logging initialized at debug level
+[2024-06-26T10:27:47.653Z] [debug]: Подключена бд
+[2024-06-26T10:27:47.684Z] [error]: Конфиг уже существует
+[2024-06-26T10:27:47.687Z] [debug]: Бот запущен
+[2024-06-26T10:27:48.783Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:27:49.088Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '8ed9aa19-ecfd-4ce3-985a-742157074a61',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:28:02.937Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:03.118Z] [debug]: Подключена бд
+[2024-06-26T10:28:03.223Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:03.226Z] [debug]: Бот запущен
+[2024-06-26T10:28:04.244Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:28:04.551Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '07309a64-49f6-4ac0-bd5c-506d9b5e019a',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:28:14.575Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:14.762Z] [debug]: Подключена бд
+[2024-06-26T10:28:14.802Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:14.805Z] [debug]: Бот запущен
+[2024-06-26T10:28:15.815Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:28:16.111Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '52dea85f-8a19-47d1-8c94-09e9cc5bca24',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:28:31.728Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:31.888Z] [debug]: Подключена бд
+[2024-06-26T10:28:31.912Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:31.914Z] [debug]: Бот запущен
+[2024-06-26T10:28:33.224Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:28:33.531Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '4a59af45-1afb-470d-8d1e-48d019bfc639',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:28:44.510Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:44.690Z] [debug]: Подключена бд
+[2024-06-26T10:28:44.734Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:44.737Z] [debug]: Бот запущен
+[2024-06-26T10:28:47.069Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:47.236Z] [debug]: Подключена бд
+[2024-06-26T10:28:47.270Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:47.273Z] [debug]: Бот запущен
+[2024-06-26T10:28:48.194Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:28:48.470Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '9d43ccb4-a372-44f8-9b85-ba90f239ff4c',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:28:51.513Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:51.699Z] [debug]: Подключена бд
+[2024-06-26T10:28:51.738Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:51.741Z] [debug]: Бот запущен
+[2024-06-26T10:28:53.100Z] [debug]Logging initialized at debug level
+[2024-06-26T10:28:53.279Z] [debug]: Подключена бд
+[2024-06-26T10:28:53.311Z] [error]: Конфиг уже существует
+[2024-06-26T10:28:53.314Z] [debug]: Бот запущен
+[2024-06-26T10:28:54.277Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:28:54.549Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'e0380e22-0555-4621-bb01-ac955a1e24ce',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:29:04.227Z] [debug]Logging initialized at debug level
+[2024-06-26T10:29:04.395Z] [debug]: Подключена бд
+[2024-06-26T10:29:04.438Z] [error]: Конфиг уже существует
+[2024-06-26T10:29:04.440Z] [debug]: Бот запущен
+[2024-06-26T10:29:05.480Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:29:06.909Z] [debug]Logging initialized at debug level
+[2024-06-26T10:29:07.083Z] [debug]: Подключена бд
+[2024-06-26T10:29:07.116Z] [error]: Конфиг уже существует
+[2024-06-26T10:29:07.118Z] [debug]: Бот запущен
+[2024-06-26T10:29:07.952Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:29:09.422Z] [debug]Logging initialized at debug level
+[2024-06-26T10:29:09.590Z] [debug]: Подключена бд
+[2024-06-26T10:29:09.625Z] [error]: Конфиг уже существует
+[2024-06-26T10:29:09.627Z] [debug]: Бот запущен
+[2024-06-26T10:29:10.469Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:29:10.909Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '10f64a3d-1af8-4c30-a384-2f3e625e55c3',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:30:44.853Z] [debug]Logging initialized at debug level
+[2024-06-26T10:30:45.034Z] [debug]: Подключена бд
+[2024-06-26T10:30:45.071Z] [error]: Конфиг уже существует
+[2024-06-26T10:30:45.074Z] [debug]: Бот запущен
+[2024-06-26T10:30:46.523Z] [debug]Logging initialized at debug level
+[2024-06-26T10:30:46.652Z] [debug]: Подключена бд
+[2024-06-26T10:30:46.680Z] [error]: Конфиг уже существует
+[2024-06-26T10:30:46.682Z] [debug]: Бот запущен
+[2024-06-26T10:30:47.592Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:30:47.871Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '7eb96ad1-4e6c-430a-846b-f3a986d14a60',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:31:01.537Z] [debug]Logging initialized at debug level
+[2024-06-26T10:31:01.661Z] [debug]: Подключена бд
+[2024-06-26T10:31:01.682Z] [error]: Конфиг уже существует
+[2024-06-26T10:31:01.684Z] [debug]: Бот запущен
+[2024-06-26T10:31:02.633Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:31:02.944Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'ba6dc5d5-f2c2-45be-bcb0-4c4972385e65',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:31:06.620Z] [debug]Logging initialized at debug level
+[2024-06-26T10:31:06.787Z] [debug]: Подключена бд
+[2024-06-26T10:31:06.815Z] [error]: Конфиг уже существует
+[2024-06-26T10:31:06.817Z] [debug]: Бот запущен
+[2024-06-26T10:31:07.748Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:31:08.056Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'ceb75cb9-4912-474b-bc5f-9c5508e6a1d8',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:31:20.662Z] [debug]Logging initialized at debug level
+[2024-06-26T10:31:20.847Z] [debug]: Подключена бд
+[2024-06-26T10:31:20.889Z] [error]: Конфиг уже существует
+[2024-06-26T10:31:20.892Z] [debug]: Бот запущен
+[2024-06-26T10:31:22.086Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:31:22.392Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'e08dd200-3755-4271-b965-61782be39b15',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:31:24.654Z] [debug]Logging initialized at debug level
+[2024-06-26T10:31:24.830Z] [debug]: Подключена бд
+[2024-06-26T10:31:24.865Z] [error]: Конфиг уже существует
+[2024-06-26T10:31:24.867Z] [debug]: Бот запущен
+[2024-06-26T10:31:25.874Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:31:26.180Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'd6848935-1a0c-4154-a9a0-59432d49a419',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:35:52.648Z] [debug]Logging initialized at debug level
+[2024-06-26T10:35:52.788Z] [debug]: Подключена бд
+[2024-06-26T10:35:52.810Z] [error]: Конфиг уже существует
+[2024-06-26T10:35:52.813Z] [debug]: Бот запущен
+[2024-06-26T10:36:09.479Z] [debug]Logging initialized at debug level
+[2024-06-26T10:36:09.622Z] [debug]: Подключена бд
+[2024-06-26T10:36:09.652Z] [error]: Конфиг уже существует
+[2024-06-26T10:36:09.654Z] [debug]: Бот запущен
+[2024-06-26T10:36:11.052Z] [debug]Logging initialized at debug level
+[2024-06-26T10:36:11.239Z] [debug]: Подключена бд
+[2024-06-26T10:36:11.270Z] [error]: Конфиг уже существует
+[2024-06-26T10:36:11.272Z] [debug]: Бот запущен
+[2024-06-26T10:36:12.397Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:36:12.704Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'dc8a486a-8a35-4eef-99e7-0afa6431a5a2',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:36:19.416Z] [debug]Logging initialized at debug level
+[2024-06-26T10:36:19.599Z] [debug]: Подключена бд
+[2024-06-26T10:36:19.630Z] [error]: Конфиг уже существует
+[2024-06-26T10:36:19.633Z] [debug]: Бот запущен
+[2024-06-26T10:36:20.588Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:36:20.897Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'e2cfbcc9-763e-49e5-9de7-ba1d47d233d9',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:36:58.115Z] [debug]Logging initialized at debug level
+[2024-06-26T10:36:58.232Z] [debug]: Подключена бд
+[2024-06-26T10:36:58.259Z] [error]: Конфиг уже существует
+[2024-06-26T10:36:58.262Z] [debug]: Бот запущен
+[2024-06-26T10:36:59.501Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:36:59.819Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '6f664c4e-2711-4a7a-823a-240f0352b50a',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:37:01.736Z] [debug]Logging initialized at debug level
+[2024-06-26T10:37:01.904Z] [debug]: Подключена бд
+[2024-06-26T10:37:01.936Z] [error]: Конфиг уже существует
+[2024-06-26T10:37:01.938Z] [debug]: Бот запущен
+[2024-06-26T10:37:02.984Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:37:03.290Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '34da0683-e0ce-4efc-b6bb-45deefdede33',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:37:11.165Z] [debug]Logging initialized at debug level
+[2024-06-26T10:37:11.332Z] [debug]: Подключена бд
+[2024-06-26T10:37:11.362Z] [error]: Конфиг уже существует
+[2024-06-26T10:37:11.364Z] [debug]: Бот запущен
+[2024-06-26T10:37:12.404Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:37:12.689Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'f841c5ca-b036-4030-9d23-df08edf609b0',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:37:17.522Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:37:21.213Z] [debug]: Deleting ticker (not found):  21
+[2024-06-26T10:37:21.415Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:37:42.789Z] [debug]Logging initialized at debug level
+[2024-06-26T10:37:42.952Z] [debug]: Подключена бд
+[2024-06-26T10:37:42.986Z] [error]: Конфиг уже существует
+[2024-06-26T10:37:42.989Z] [debug]: Бот запущен
+[2024-06-26T10:37:44.047Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:37:44.354Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '70c48265-303b-4906-9182-1b6dc9cc8e0d',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:37:44.699Z] [debug]: Deleting ticker (not found):  21
+[2024-06-26T10:43:15.731Z] [debug]Logging initialized at debug level
+[2024-06-26T10:43:15.868Z] [debug]: Подключена бд
+[2024-06-26T10:43:15.896Z] [error]: Конфиг уже существует
+[2024-06-26T10:43:15.898Z] [debug]: Бот запущен
+[2024-06-26T10:43:16.918Z] [debug]Logging initialized at debug level
+[2024-06-26T10:43:17.069Z] [debug]: Подключена бд
+[2024-06-26T10:43:17.090Z] [error]: Конфиг уже существует
+[2024-06-26T10:43:17.092Z] [debug]: Бот запущен
+[2024-06-26T10:43:17.980Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:43:18.250Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '1251f465-5ea5-499d-b3c8-ea673b9a34aa',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:43:26.013Z] [debug]Logging initialized at debug level
+[2024-06-26T10:43:26.182Z] [debug]: Подключена бд
+[2024-06-26T10:43:26.213Z] [error]: Конфиг уже существует
+[2024-06-26T10:43:26.215Z] [debug]: Бот запущен
+[2024-06-26T10:43:27.197Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:43:27.505Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '545a39e1-df77-4808-a68a-fd5b12dcbe2f',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:43:51.158Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:43:52.240Z] [debug]: Deleting ticker (not found):  12
+[2024-06-26T10:43:52.395Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:44:08.325Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:44:11.416Z] [debug]: Deleting ticker (not found):  ETHUSDC
+[2024-06-26T10:44:11.638Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:44:21.161Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:44:23.607Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:44:28.842Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:44:29.968Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:44:30.827Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:44:34.269Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:45:30.132Z] [debug]Logging initialized at debug level
+[2024-06-26T10:45:30.315Z] [debug]: Подключена бд
+[2024-06-26T10:45:30.350Z] [error]: Конфиг уже существует
+[2024-06-26T10:45:30.354Z] [debug]: Бот запущен
+[2024-06-26T10:45:31.627Z] [debug]Logging initialized at debug level
+[2024-06-26T10:45:31.765Z] [debug]: Подключена бд
+[2024-06-26T10:45:31.802Z] [error]: Конфиг уже существует
+[2024-06-26T10:45:31.804Z] [debug]: Бот запущен
+[2024-06-26T10:45:34.654Z] [debug]Logging initialized at debug level
+[2024-06-26T10:45:34.818Z] [debug]: Подключена бд
+[2024-06-26T10:45:34.847Z] [error]: Конфиг уже существует
+[2024-06-26T10:45:34.850Z] [debug]: Бот запущен
+[2024-06-26T10:45:59.808Z] [debug]Logging initialized at debug level
+[2024-06-26T10:45:59.970Z] [debug]: Подключена бд
+[2024-06-26T10:46:00.000Z] [error]: Конфиг уже существует
+[2024-06-26T10:46:00.007Z] [debug]: Бот запущен
+[2024-06-26T10:46:15.789Z] [debug]Logging initialized at debug level
+[2024-06-26T10:46:15.966Z] [debug]: Подключена бд
+[2024-06-26T10:46:16.000Z] [error]: Конфиг уже существует
+[2024-06-26T10:46:16.002Z] [debug]: Бот запущен
+[2024-06-26T10:47:01.897Z] [debug]Logging initialized at debug level
+[2024-06-26T10:47:02.077Z] [debug]: Подключена бд
+[2024-06-26T10:47:02.110Z] [error]: Конфиг уже существует
+[2024-06-26T10:47:02.112Z] [debug]: Бот запущен
+[2024-06-26T10:47:16.651Z] [debug]Logging initialized at debug level
+[2024-06-26T10:47:16.810Z] [debug]: Подключена бд
+[2024-06-26T10:47:16.836Z] [error]: Конфиг уже существует
+[2024-06-26T10:47:16.837Z] [debug]: Бот запущен
+[2024-06-26T10:47:18.312Z] [debug]Logging initialized at debug level
+[2024-06-26T10:47:18.477Z] [debug]: Подключена бд
+[2024-06-26T10:47:18.503Z] [error]: Конфиг уже существует
+[2024-06-26T10:47:18.506Z] [debug]: Бот запущен
+[2024-06-26T10:47:19.342Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:47:23.340Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:47:23.647Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '1bfbc762-58d8-45ed-8a37-b2aaed684983',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:47:23.848Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:47:28.823Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:47:29.815Z] [debug]: Deleting ticker (not found):  12
+[2024-06-26T10:47:29.942Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:47:35.933Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:47:37.223Z] [debug]: Deleting ticker (not found):  wdqdqw
+[2024-06-26T10:47:37.469Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:47:40.560Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:47:43.207Z] [debug]: Deleting ticker (not found):  ETHUSDC
+[2024-06-26T10:47:43.372Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:47:53.529Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:47:57.949Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: '1bfbc762-58d8-45ed-8a37-b2aaed684983',
+  req_id: 'tickers.TONUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:47:58.353Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:48:37.877Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:48:45.467Z] [debug]: Deleting ticker (not found):  SQDUSDT
+[2024-06-26T10:48:45.723Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:49:03.177Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:49:07.897Z] [debug]: Deleting ticker (not found):  NLKUSDT
+[2024-06-26T10:49:08.094Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:49:18.915Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:49:26.532Z] [debug]: Deleting ticker (not found):  READLUSDT
+[2024-06-26T10:49:26.730Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:49:41.991Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:49:44.243Z] [debug]: Deleting ticker (not found):  REALUSDT
+[2024-06-26T10:49:44.549Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:49:59.197Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:50:01.760Z] [debug]: Deleting ticker (not found):  REALUSD
+[2024-06-26T10:50:01.960Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:50:34.389Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:50:35.548Z] [debug]: Deleting ticker (not found):  MOJO/USDT
+[2024-06-26T10:50:35.852Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:50:37.775Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:50:40.360Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T10:50:40.576Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:53:32.167Z] [debug]Logging initialized at debug level
+[2024-06-26T10:53:32.333Z] [debug]: Подключена бд
+[2024-06-26T10:53:32.369Z] [error]: Конфиг уже существует
+[2024-06-26T10:53:32.372Z] [debug]: Бот запущен
+[2024-06-26T10:53:33.423Z] [debug]: Connection open for websocket with ID: v5LinearPublic
+[2024-06-26T10:53:33.730Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'd21afe2f-36ac-418c-afa8-36cee5fba7be',
+  req_id: 'tickers.BTCUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:53:33.983Z] [debug]: Get response {
+  success: true,
+  ret_msg: '',
+  conn_id: 'd21afe2f-36ac-418c-afa8-36cee5fba7be',
+  req_id: 'tickers.TONUSDT',
+  op: 'subscribe',
+  wsKey: 'v5LinearPublic'
+}
+[2024-06-26T10:53:50.322Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:53:51.960Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T10:53:52.161Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:53:54.819Z] [debug][998972268/Roofhack]: Saving deleteMessages to session
+[2024-06-26T10:53:59.799Z] [debug]: Deleting ticker (not found):  REALUSDT
+[2024-06-26T10:53:59.941Z] [debug][998972268/Roofhack]: Deleting deleteMessages from session
+[2024-06-26T10:57:51.760Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T11:02:31.441Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T11:11:54.453Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T11:19:52.950Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T11:25:29.141Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:19:17.620Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:27:57.660Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:28:45.104Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:32:40.544Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:33:30.115Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:35:02.884Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:36:36.557Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:36:50.024Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:37:53.480Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:38:06.805Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:42:35.254Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:45:11.474Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:46:54.933Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:47:30.356Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:49:43.120Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:51:17.002Z] [debug]: Deleting ticker (not found):  MOJOUSDT
+[2024-06-26T12:56:19.358Z] [debug]: Deleting ticker (not found):  MOJOUSDT
