@@ -1,17 +1,30 @@
-import { WebsocketClient, WSClientConfigurableOptions } from "bybit-api";
-import { WEBSOCKET_ERRORS, WSCONFIG } from "../utils/CONST";
+import {
+  CategoryV5,
+  WebsocketClient,
+  WSClientConfigurableOptions
+} from "bybit-api";
+import { WSCONFIG } from "../utils/CONST";
 import loggerWithCtx from "../utils/logger";
+import { OIService } from "..";
+
+export interface IByBitApiResponse {
+  topic: string;
+  type: "delta" | "snapshot";
+  data: {
+    symbol: string;
+    lastPrice?: string;
+    openInterestValue?: string;
+  };
+  wsKey: "v5LinearPublic" | "v5SpotPublic";
+}
 
 class ByBitWebSocketApiService {
   private client: WebsocketClient;
-  private OIService;
 
   constructor(
     WebsocketClientClass: typeof WebsocketClient,
-    config: WSClientConfigurableOptions,
-    oIService
+    config: WSClientConfigurableOptions
   ) {
-    this.OIService = oIService;
     this.client = new WebsocketClientClass(config);
 
     // Добавляем обработчик события 'open'
@@ -23,16 +36,21 @@ class ByBitWebSocketApiService {
     this.client.on("error", this.onError);
   }
 
-  async subscribe(subcribeName: string, TYPE = "linear" as const) : Promise<void> {
+  async subscribe(subcribeName: string, TYPE: CategoryV5): Promise<void> {
     try {
-    // (v5) and/or subscribe to individual topics on demand
-    await this.client
-      .subscribeV5(subcribeName, TYPE)
+      // (v5) and/or subscribe to individual topics on demand
+      await this.client.subscribeV5(subcribeName, TYPE);
+    } catch (err) {
+      throw new Error(`Cant subcribe ${TYPE}` + err);
+    }
+  }
 
-      
-      } catch(err) {
-        throw new Error('Can`t subcribe' + err)
-      }
+  async unSubscribe(subcribeName: string, TYPE: CategoryV5): Promise<void> {
+    try {
+      await this.client.unsubscribeV5(subcribeName, TYPE);
+    } catch (err) {
+      throw new Error("Can`t subcribe" + err);
+    }
   }
 
   // Метод для обработки события 'open'
@@ -56,7 +74,10 @@ class ByBitWebSocketApiService {
   }
 
   // Метод для обработки события 'update' (получение информации с сервера)
-  private async onUpdate(data: any) {}
+  private async onUpdate(data: IByBitApiResponse) {
+    await OIService.getTickerUpdate(data);
+    // loggerWithCtx.debug(undefined, "Get response", data);
+  }
 
   // Метод для обработки события 'close'
   private async onClose() {
@@ -64,15 +85,15 @@ class ByBitWebSocketApiService {
   }
 
   private onError = async (err: any) => {
-    if (err.ret_msg.includes(WEBSOCKET_ERRORS.not_found)) {
-      const ticker = err.ret_msg.replaceAll(WEBSOCKET_ERRORS.not_found, "");
-      await this.OIService.deleteTrackable(ticker);
-      loggerWithCtx.debug(undefined, `Deleting ticker (not found): `, ticker);
-    }
+    // if (err.ret_msg.includes(WEBSOCKET_ERRORS.not_found)) {
+    //   const ticker = err.ret_msg.replaceAll(WEBSOCKET_ERRORS.not_found, "");
+    //   await OIService.deleteTrackable(ticker);
+    //   loggerWithCtx.debug(undefined, `Deleting ticker (not found): `, ticker);
+    // }
   };
 
-  static getWebsocketClient(OIService): ByBitWebSocketApiService {
-    return new ByBitWebSocketApiService(WebsocketClient, WSCONFIG, OIService);
+  static getWebsocketClient(): ByBitWebSocketApiService {
+    return new ByBitWebSocketApiService(WebsocketClient, WSCONFIG);
   }
 }
 

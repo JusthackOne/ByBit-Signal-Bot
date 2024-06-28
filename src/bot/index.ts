@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { Scenes, Telegraf, session } from "telegraf";
+import { Context, Scenes, Telegraf, session } from "telegraf";
 import mongoose from "mongoose";
 
 import messageHandler from "./handlers/messageHandlers.js";
@@ -14,8 +14,9 @@ import initializeBDdata from "./utils/initializeBDdata.js";
 import { SetOI } from "./controllers/SetOI/index.js";
 
 import ByBitWebSocketApiService from "./services/api.service.js";
-import OIServiceCl from "./services/oi.service.js";
+
 import Trackable from "./models/Trackable.js";
+import OIServiceCl from "./services/oi.service.js";
 
 const MONGODB_URI =
   process.env.MONGODB_URI ||
@@ -26,7 +27,7 @@ if (!BOT_TOKEN) {
   throw new Error("BOT_TOKEN is missing from environment variables.");
 }
 
-let bot, OIService;
+let bot : Context, OIService: OIServiceCl, BYBIT_API: ByBitWebSocketApiService;
 
 mongoose
   .connect(MONGODB_URI)
@@ -59,16 +60,15 @@ mongoose
 
     logger.debug(undefined, "Бот запущен");
 
-    OIService = OIServiceCl.getOIService(Trackable, undefined, bot);
-    const BybitWebSocketService =
-      ByBitWebSocketApiService.getWebsocketClient(OIService);
-    OIService.API = BybitWebSocketService;
-    OIService.onStartApp();
+    OIService = OIServiceCl.getOIService(Trackable, bot);
+    BYBIT_API = ByBitWebSocketApiService.getWebsocketClient();
+
+    await OIService.onStartApp();
 
     // Запуск бота
     await bot.launch({
       allowedUpdates: ["message", "callback_query"]
-    });
+    })
 
     process.once("SIGINT", () => bot.stop("SIGINT"));
     process.once("SIGTERM", () => bot.stop("SIGTERM"));
@@ -91,5 +91,5 @@ mongoose.connection.on("error", (err) => {
   process.exit(1);
 });
 
-export { OIService };
+export { OIService, BYBIT_API };
 export default bot;

@@ -14,6 +14,7 @@ import loggerWithCtx from "../../utils/logger";
 import { getTrackablesKeyboard } from "./utils";
 import { ITrackable } from "../../models/Trackable";
 import deleteMessagesMiddleware from "../../middlewares/deleteMessages.middleware";
+import { OIService } from "../..";
 
 const sendMessage = new Composer();
 sendMessage.hears(MAIN_ROUTES.DELETE, async (ctx: ContextMessageUpdate) => {
@@ -120,6 +121,7 @@ actionsDeleteTrackable.action(
     );
 
     const deleteTrackable = await Trackable.findOne({ _id }).exec();
+    await OIService.unSubcribeTicker(deleteTrackable?.symbol, deleteTrackable?.type) // Отмена подписки
     await Trackable.deleteOne({ _id });
     const trackables = await Trackable.find().exec();
 

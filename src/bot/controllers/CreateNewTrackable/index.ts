@@ -29,7 +29,12 @@ saveTrackable.on(
   message("text"),
   async (ctx: ContextMessageUpdate, next) => {
     const symbol = ctx.message.text;
-const isCanBeTrackable = await OIService.subcribeNewTicker(symbol)
+    // const isCanBeTrackableSpot = await OIService.subcribeTicker(symbol, "spot");
+    const isCanBeTrackableLinear = await OIService.subcribeTicker(
+      symbol,
+      "linear"
+    );
+
     const trackable = await Trackable.findOne({ symbol: symbol }).exec();
 
     if (trackable) {
@@ -38,15 +43,20 @@ const isCanBeTrackable = await OIService.subcribeNewTicker(symbol)
       return next();
     }
 
-    if (!isCanBeTrackable) {
+    if (!isCanBeTrackableLinear) {
       await ctx.replyWithHTML(`<b>Невозможно отслеживать данную пару</b>`);
 
       return next();
     }
 
+    // if (isCanBeTrackableLinear) {
+    //   await OIService.unSubcribeTicker(symbol, "spot");
+    // }
 
-
-    const newTrackable = new Trackable({ symbol });
+    const newTrackable = new Trackable({
+      symbol,
+      type: isCanBeTrackableLinear ? "linear" : "spot"
+    });
     await newTrackable.save();
 
     await ctx.replyWithHTML(`<b>Пара успешно сохранена!</b>`);

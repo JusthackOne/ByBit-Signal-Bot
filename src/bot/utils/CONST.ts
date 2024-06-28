@@ -1,3 +1,5 @@
+import { WSClientConfigurableOptions } from "bybit-api";
+
 export const MAIN_ROUTES = {
   OI: "💼 OI Screener",
   PUMP: "📈 Pump Screener",
@@ -42,18 +44,19 @@ export const ACTIONS = {
   NONE: "none"
 };
 
+export const IDS = [998972268, 1189241784]
+
 export const TRACKABLE_KEYBOARD_ITEMS = 6;
 
-export const WSCONFIG = {
+export const WSCONFIG : WSClientConfigurableOptions = {
   /*
     The following parameters are optional:
   */
 
   // Connects to livenet by default. Set testnet to true to use the testnet environment.
-  testnet: true,
 
   // If you can, use the v5 market (the newest generation of Bybit's websockets)
-  market: "v5" as const,
+  market: "v5"
 
   // how long to wait (in ms) before deciding the connection should be terminated & reconnected
   // pongTimeout: 1000,
@@ -74,13 +77,12 @@ export const WSCONFIG = {
   // requestOptions: { }
 
   // override which URL to use for websocket connections
-  wsUrl: 'wss://stream.bybit.com/v5/public/linear'
+  // wsUrl: 'wss://stream.bybit.com/v5/public'
 };
 
 export const WEBSOCKET_STREAM = {
   tickers: "tickers."
 };
-
 
 export const WEBSOCKET_ERRORS = {
   not_found: "error:handler not found,topic:tickers."
