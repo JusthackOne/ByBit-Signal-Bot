@@ -283,7 +283,10 @@ class ByBitService {
           h24_signal_count_growth: Number(signals_count)
         }
       );
-    } else if (oi_change_recession >= config.oi_recession_percentage) {
+    } else if (
+      oi_change_recession < 0 &&
+      Math.abs(oi_change_recession) >= config.oi_recession_percentage
+    ) {
       const oi_change_value: number = formatNumberToMillion(
         Number(updateData.openInterestValue) - ticker.openInterestValueRecession
       );
@@ -294,7 +297,7 @@ class ByBitService {
             update_oi(
               updateData.symbol,
               config.oi_recession_period,
-              oi_change_recession,
+              Math.abs(oi_change_recession),
               oi_change_value,
               change_price,
               signals_count,
@@ -435,7 +438,10 @@ class ByBitService {
           h24_signal_count_growth: Number(signals_count)
         }
       );
-    } else if (pump_change_recession >= config.pump_recession_percentage) {
+    } else if (
+      pump_change_recession < 0 &&
+      Math.abs(pump_change_recession) >= config.pump_recession_percentage
+    ) {
       const signals_count = ticker.h24_signal_count_recession + 1;
 
       for (const id of IDS) {
@@ -446,8 +452,8 @@ class ByBitService {
               updateData.symbol,
 
               config.pump_growth_period,
-              pump_change_recession,
-              ticker.priceGrowth,
+              Math.abs(pump_change_recession),
+              ticker.priceRecession,
               Number(updateData.lastPrice),
               signals_count,
               "recession"

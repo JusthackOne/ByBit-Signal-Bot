@@ -57,22 +57,18 @@ export const getOpenInterestValueChange = (
   updateData: IByBitApiResponse["data"],
   ticker: IByBitLinear_OI
 ): IgetUpdateOIPercentage => {
-  const oi_change_growth: number = Math.abs(
-    Number(
-      calculatePercentageChange(
-        ticker.openInterestValueGrowth,
-        Number(updateData.openInterestValue)
-      ).toFixed(2)
-    )
+  const oi_change_growth: number = Number(
+    calculatePercentageChange(
+      ticker.openInterestValueGrowth,
+      Number(updateData.openInterestValue)
+    ).toFixed(2)
   );
 
-  const oi_change_recession: number = Math.abs(
-    Number(
-      calculatePercentageChange(
-        ticker.openInterestValueRecession,
-        Number(updateData.openInterestValue)
-      ).toFixed(2)
-    )
+  const oi_change_recession: number = Number(
+    calculatePercentageChange(
+      ticker.openInterestValueRecession,
+      Number(updateData.openInterestValue)
+    ).toFixed(2)
   );
 
   return { oi_change_growth, oi_change_recession };
@@ -82,22 +78,18 @@ export const getPumpChange = (
   updateData: IByBitApiResponse["data"],
   ticker: IByBit_PUMP
 ): IgetUpdatePUMPPercentage => {
-  const pump_change_growth: number = Math.abs(
-    Number(
-      calculatePercentageChange(
-        ticker.priceGrowth,
-        Number(updateData.lastPrice)
-      ).toFixed(2)
-    )
+  const pump_change_growth: number = Number(
+    calculatePercentageChange(
+      ticker.priceGrowth,
+      Number(updateData.lastPrice)
+    ).toFixed(2)
   );
 
-  const pump_change_recession: number = Math.abs(
-    Number(
-      calculatePercentageChange(
-        ticker.priceRecession,
-        Number(updateData.lastPrice)
-      ).toFixed(2)
-    )
+  const pump_change_recession: number = Number(
+    calculatePercentageChange(
+      ticker.priceRecession,
+      Number(updateData.lastPrice)
+    ).toFixed(2)
   );
 
   return { pump_change_recession, pump_change_growth };
