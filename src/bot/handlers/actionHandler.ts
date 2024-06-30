@@ -4,7 +4,7 @@ import { ACTIONS, SESSION_FIELDS } from "../utils/CONST.js";
 import asyncWrapper from "../utils/error-handler";
 import deleteMessages from "../utils/deleteMessages.js";
 import { deleteFromSession } from "../utils/session.js";
-import deleteMessagesMiddleware from "../middlewares/deleteMessages.middleware.js";
+import {deleteMessageNext} from "../middlewares/deleteMessages.middleware.js";
 
 export default function handler(bot) {
   // Empty task
@@ -18,7 +18,7 @@ export default function handler(bot) {
   // Close message with inlineButton keyboard
   bot.action(
     ACTIONS.CLOSE,
-    deleteMessagesMiddleware,
+    deleteMessageNext,
     asyncWrapper(async (ctx: ContextMessageUpdate) => {
       await ctx.answerCbQuery();
       return await ctx.scene.leave();

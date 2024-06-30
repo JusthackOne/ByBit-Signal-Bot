@@ -3,9 +3,12 @@ import {
   WebsocketClient,
   WSClientConfigurableOptions
 } from "bybit-api";
-import { WSCONFIG } from "../utils/CONST";
+
+import { WSCONFIG, WSKEY } from "../utils/CONST";
 import loggerWithCtx from "../utils/logger";
-import { OIService } from "..";
+import { ByBitService } from "./../index";
+import { CategoryV5 } from "bybit-api";
+import executeIfNotRunning from "../utils/executeIfNotRunning";
 
 export interface IByBitApiResponse {
   topic: string;
@@ -17,6 +20,18 @@ export interface IByBitApiResponse {
   };
   wsKey: "v5LinearPublic" | "v5SpotPublic";
 }
+
+export interface IByBitApiResponseLiquidation {
+  topic: string;
+  type:  "snapshot";
+  data: {
+    symbol: string;
+    side: 'Buy' | 'Sell';
+    price: string
+  };
+  wsKey: "v5LinearPublic" | "v5SpotPublic";
+}
+
 
 class ByBitWebSocketApiService {
   private client: WebsocketClient;
@@ -47,7 +62,7 @@ class ByBitWebSocketApiService {
 
   async unSubscribe(subcribeName: string, TYPE: CategoryV5): Promise<void> {
     try {
-      await this.client.unsubscribeV5(subcribeName, TYPE);
+      this.client.unsubscribeV5(subcribeName, TYPE);
     } catch (err) {
       throw new Error("Can`t subcribe" + err);
     }
@@ -74,9 +89,30 @@ class ByBitWebSocketApiService {
   }
 
   // Метод для обработки события 'update' (получение информации с сервера)
-  private async onUpdate(data: IByBitApiResponse) {
-    await OIService.getTickerUpdate(data);
-    // loggerWithCtx.debug(undefined, "Get response", data);
+  private async onUpdate(data: IByBitApiResponse | IByBitApiResponseLiquidation) {
+    const wsKey = data.wsKey; // get topic of responst
+
+    if (wsKey.includes(WSKEY.linear)) {
+      await executeIfNotRunning(
+        () => ByBitService.getTickerUpdateOI(data),
+        data.data.symbol + ".OI"
+      );
+
+      await executeIfNotRunning(
+        () => ByBitService.getTickerUpdateREKT(data),
+        data.data.symbol + ".REKT"
+      );
+
+      await executeIfNotRunning(
+        () => ByBitService.getTickerUpdatePUMP(data, "linear"),
+        data.data.symbol + ".PUMP"
+      );
+    } else if (wsKey.includes(WSKEY.spot)) {
+      await executeIfNotRunning(
+        () => ByBitService.getTickerUpdatePUMP(data, "spot"),
+        data.data.symbol + ".PUMP"
+      );
+    }
   }
 
   // Метод для обработки события 'close'
@@ -87,7 +123,7 @@ class ByBitWebSocketApiService {
   private onError = async (err: any) => {
     // if (err.ret_msg.includes(WEBSOCKET_ERRORS.not_found)) {
     //   const ticker = err.ret_msg.replaceAll(WEBSOCKET_ERRORS.not_found, "");
-    //   await OIService.deleteTrackable(ticker);
+    //   await ByBitService.deleteTrackable(ticker);
     //   loggerWithCtx.debug(undefined, `Deleting ticker (not found): `, ticker);
     // }
   };

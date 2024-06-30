@@ -81,9 +81,18 @@ export const WSCONFIG : WSClientConfigurableOptions = {
 };
 
 export const WEBSOCKET_STREAM = {
-  tickers: "tickers."
+  tickers: "tickers.",
+  liquidation: "liquidation.",
 };
 
 export const WEBSOCKET_ERRORS = {
   not_found: "error:handler not found,topic:tickers."
 };
+
+export const WSKEY = {spot: 'v5SpotPublic', linear: 'v5LinearPublic'}
+
+export const MAIN_TEXT = {
+  PUMP: () => {}
+}
+
+export const CANCEL_SCENE : string = '❌ Отменить'

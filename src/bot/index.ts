@@ -4,8 +4,8 @@ dotenv.config();
 import { Context, Scenes, Telegraf, session } from "telegraf";
 import mongoose from "mongoose";
 
-import messageHandler from "./handlers/messageHandlers.js";
-import commandHandler from "./handlers/commandHandlers.js";
+import messageHandler from "./handlers/messageHandler.js";
+import commandHandler from "./handlers/commandHandler.js";
 import actionHandler from "./handlers/actionHandler.js";
 import logger from "./utils/logger.js";
 import { CreateNewTrackable } from "./controllers/CreateNewTrackable/index.js";
@@ -16,7 +16,9 @@ import { SetOI } from "./controllers/SetOI/index.js";
 import ByBitWebSocketApiService from "./services/api.service.js";
 
 import Trackable from "./models/Trackable.js";
-import OIServiceCl from "./services/oi.service.js";
+import ByBitServiceCl from "./services/bybit.service/bybit.service.js";
+import { SetPUMP } from "./controllers/SetPUPM/index.js";
+import { SetREKT } from "./controllers/SetREKT/index.js";
 
 const MONGODB_URI =
   process.env.MONGODB_URI ||
@@ -27,7 +29,9 @@ if (!BOT_TOKEN) {
   throw new Error("BOT_TOKEN is missing from environment variables.");
 }
 
-let bot : Context, OIService: OIServiceCl, BYBIT_API: ByBitWebSocketApiService;
+let bot: Context,
+  ByBitService: ByBitServiceCl,
+  BYBIT_API: ByBitWebSocketApiService;
 
 mongoose
   .connect(MONGODB_URI)
@@ -44,7 +48,9 @@ mongoose
     const stage = new Scenes.Stage([
       CreateNewTrackable,
       DeleteTrackable,
-      SetOI
+      SetOI,
+      SetPUMP,
+      SetREKT
     ]);
     bot.use(session());
     bot.use(stage.middleware());
@@ -60,15 +66,16 @@ mongoose
 
     logger.debug(undefined, "Бот запущен");
 
-    OIService = OIServiceCl.getOIService(Trackable, bot);
+    ByBitService = ByBitServiceCl.getByBitService(Trackable, bot);
     BYBIT_API = ByBitWebSocketApiService.getWebsocketClient();
 
-    await OIService.onStartApp();
+    await ByBitService.onStartApp();
+    await ByBitService.signalCheckAndClear();
 
     // Запуск бота
     await bot.launch({
       allowedUpdates: ["message", "callback_query"]
-    })
+    });
 
     process.once("SIGINT", () => bot.stop("SIGINT"));
     process.once("SIGTERM", () => bot.stop("SIGTERM"));
@@ -91,5 +98,5 @@ mongoose.connection.on("error", (err) => {
   process.exit(1);
 });
 
-export { OIService, BYBIT_API };
+export { ByBitService, BYBIT_API };
 export default bot;

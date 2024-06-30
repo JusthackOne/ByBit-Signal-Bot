@@ -1,5 +1,4 @@
-import { Composer, Scenes, ContextMessageUpdate, session } from "telegraf";
-import { message } from "telegraf/filters";
+import { Composer, Scenes, ContextMessageUpdate } from "telegraf";
 
 import {
   ACTIONS,
@@ -7,45 +6,17 @@ import {
   SESSION_FIELDS,
   TRACKABLE_KEYBOARD_ITEMS
 } from "../../utils/CONST";
-import { deleteFromSession, saveToSession } from "../../utils/session";
-import Trackable, { ITrackable } from "../../models/Trackable";
-import deleteMessages from "../../utils/deleteMessages";
-import loggerWithCtx from "../../utils/logger";
+import { saveToSession } from "../../utils/session";
 import { getTrackablesKeyboard } from "./utils";
-import { ITrackable } from "../../models/Trackable";
-import deleteMessagesMiddleware from "../../middlewares/deleteMessages.middleware";
-import { OIService } from "../..";
+import Trackable from "../../models/Trackable";
+
+import { deleteMessageNext } from "../../middlewares/deleteMessages.middleware";
+import { ByBitService } from "../..";
+import { sendMessageMsg } from "./helpers";
 
 const sendMessage = new Composer();
 sendMessage.hears(MAIN_ROUTES.DELETE, async (ctx: ContextMessageUpdate) => {
-  const trackables = await Trackable.find().exec();
-
-  if (!trackables.length) {
-    await ctx.replyWithHTML(
-      `<b>Пока вы не добавили ни одной отслеживаемой пары!</b>`
-    );
-    return await ctx.scene.leave();
-  }
-
-  const { trackableKeyboard } = getTrackablesKeyboard(
-    trackables,
-    ACTIONS.DELETE_TRACKABLE
-  );
-
-  const msg = await ctx.replyWithHTML(
-    `<b>Список отслеживаемых пар: </b>`,
-    trackableKeyboard
-  );
-
-  saveToSession(
-    ctx,
-    SESSION_FIELDS.DELETE_MESSAGES,
-    ctx.session[SESSION_FIELDS.DELETE_MESSAGES]
-      ? [...ctx.session[SESSION_FIELDS.DELETE_MESSAGES], msg.message_id]
-      : [msg.message_id]
-  );
-
-  await ctx.wizard.next();
+  await sendMessageMsg(ctx);
 });
 
 const actionsDeleteTrackable = new Composer();
@@ -113,7 +84,7 @@ actionsDeleteTrackable.action(
 
 actionsDeleteTrackable.action(
   new RegExp(ACTIONS.DELETE_TRACKABLE, "g"),
-  deleteMessagesMiddleware,
+  deleteMessageNext,
   async (ctx: ContextMessageUpdate, next) => {
     const _id = ctx.callbackQuery.data.replace(
       ACTIONS.DELETE_TRACKABLE + " ",
@@ -121,7 +92,17 @@ actionsDeleteTrackable.action(
     );
 
     const deleteTrackable = await Trackable.findOne({ _id }).exec();
-    await OIService.unSubcribeTicker(deleteTrackable?.symbol, deleteTrackable?.type) // Отмена подписки
+    await ByBitService.unSubcribeTicker(
+      deleteTrackable.symbol,
+      deleteTrackable.type
+    ); // Отмена подписки
+
+    if (deleteTrackable.type === "linear") {
+      await ByBitService.unSubcribeLiquidation(
+        deleteTrackable.symbol,
+        deleteTrackable.type
+      );
+    }
     await Trackable.deleteOne({ _id });
     const trackables = await Trackable.find().exec();
 
