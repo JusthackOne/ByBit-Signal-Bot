@@ -14,9 +14,9 @@ This bot in telegram sends "signals" to the user, according to the settings that
 - Run `npm start` to start the client server.
 
 Configure your `.env` in root folder with:
-`BOT_TOKEN` (Bot telegram token)
-`DATABASE_HOST` (Mongo DB host)
-`ADMIN_TG_ID` (User id, who can use bot)
+`BOT_TOKEN` (Bot telegram token)<br>
+`DATABASE_HOST` (Mongo DB host)<br>
+`ADMIN_TG_ID` (User id, who can use bot)<br>
 
 ## Some Snapshots 📸
 ### Open Interest change message
