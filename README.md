@@ -1,6 +1,6 @@
 # ByBit Signal Bot 📈
 
-This bot in telegram sends "signals" to the user, according to the settings that the user sets in the bot. There are four types of signals in total - `PUMP`, `DUMP`, `OPEN INTEREST` Change and `LIQUIDATION`. The user can change the price in percent, as well as track certain cryptocurrency pairs. If a change occurs (which is tracked in real time), the bot sends a notification about it. This bot will be useful for people who are engaged in trading, so they can quickly, automatically track all the patterns they are interested in and make successful transactions.
+This bot in telegram sends "signals" to the user, according to the settings that the user sets in the bot. There are four types of signals in total - `PUMP`, `DUMP`, `OPEN INTEREST` and `LIQUIDATION`. The user can change the price in percent, as well as track certain cryptocurrency pairs. If a change occurs (which is tracked in real time), the bot sends a notification about it. This bot will be useful for people who are engaged in trading, so they can quickly, automatically track all the patterns they are interested in and make successful transactions.
 
 ## Stack 📚
 
