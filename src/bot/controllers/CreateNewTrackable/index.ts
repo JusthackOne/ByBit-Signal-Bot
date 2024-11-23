@@ -1,12 +1,8 @@
 import { Composer, Scenes, ContextMessageUpdate } from "telegraf";
 import { message } from "telegraf/filters";
 
-import { CANCEL_SCENE, MAIN_ROUTES, SESSION_FIELDS } from "../../utils/CONST";
-import { deleteFromSession, saveToSession } from "../../utils/session";
-import deleteMessages from "../../utils/deleteMessages";
+import { CANCEL_SCENE, MAIN_ROUTES } from "../../utils/CONST";
 
-import Trackable from "../../models/Trackable";
-import { ByBitService } from "./../../index";
 import { createNewTrackableMsg, saveTrackableMsg } from "./helpers";
 import {
   deleteMessageLeave,
